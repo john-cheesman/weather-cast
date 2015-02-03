@@ -1,0 +1,23 @@
+{
+  "name": "weather-cast",
+  "version": "0.0.0",
+  "description": "Location based 7 day weather forecast",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/john-cheesman/weather-cast.git"
+  },
+  "keywords": [
+    "weather",
+    "forecast"
+  ],
+  "author": "John Cheesman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/john-cheesman/weather-cast/issues"
+  },
+  "homepage": "https://github.com/john-cheesman/weather-cast"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "weather-cast",
+  "version": "0.0.0",
+  "authors": [
+    "John Cheesman <info@johncheesman.org.uk>"
+  ],
+  "description": "Location based 7 day weather forecast",
+  "keywords": [
+    "weather",
+    "forecast"
+  ],
+  "license": "MIT",
+  "homepage": "http://johncheesman.org.uk/weather-cast",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
