@@ -2,10 +2,6 @@
   "name": "weather-cast",
   "version": "0.0.0",
   "description": "Location based 7 day weather forecast",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "http://github.com/john-cheesman/weather-cast.git"
@@ -14,10 +10,17 @@
     "weather",
     "forecast"
   ],
-  "author": "John Cheesman",
+  "author": "John Cheesman <info@johncheesman.org.uk>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/john-cheesman/weather-cast/issues"
   },
-  "homepage": "https://github.com/john-cheesman/weather-cast"
+  "homepage": "https://github.com/john-cheesman/weather-cast",
+  "devDependencies": {
+    "run-sequence": "^1.0.2",
+    "del": "^1.1.1",
+    "gulp-concat": "^2.4.3",
+    "gulp": "^3.8.10",
+    "gulp-uglify": "^1.1.0"
+  }
 }
