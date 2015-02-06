@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
     <head>
-        <title>Weather Cast</title>
+        <title>WeatherCast</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--<link rel="stylesheet" href="/css/style.css" />-->
     </head>
 
-    <body>
+    <body ng-controller="Forecast as forecast">
+        <header class="primary-header">
+            <h1>WeatherCast {{'hello' + ' world'}}</h1>
+            <p class="tagline">Quick 7 day weather forecasts</p>
+        </header>
 
+        <form class="location-search">
+            <input class="location-input" type="search" placeholder="Your location" />
+            <button class="location-submit" type="submit">Go</button>
+        </form>
+
+        <section class="forecast">
+            <header class="forecast-header">
+                <h1>{{forecast.location.name + ', ' + forecast.location.country}}</h1>
+            </header>
+
+            <ul class="forecast-days">
+                <li class="forecast-day" ng-repeat="forecast in forecast.forecasts">
+                    <h2>{{(forecast.dt * 1000) | date: 'EEEE dd/MM/yy'}}</h2>
+                    <p class="forecast-temperature">{{forecast.temp.min | celsius}} - {{forecast.temp.max | celsius}}&deg;C</p>
+                    <p class="forecast-temperature">{{forecast.temp.min | fahrenheit}} - {{forecast.temp.max | fahrenheit}}&deg;F</p>
+                    <p class="forecast-description">{{forecast.weather[0].description}}</p>
+                </li>
+            </ul>
+        </section>
+
+        <footer class="primary-footer">
+            <p>&copy; <a href="http://johncheesman.org.uk/">John Cheesman</a> {{forecast.date | date: 'yyyy'}} // Powered by <a href="http://openweathermap.org/">Open Weather Map</a> and <a href="http://angularjs.org/">Angular JS</a></a></p>
+        </footer>
 
         <script src="/js/scripts.js"></script>
     </body>
