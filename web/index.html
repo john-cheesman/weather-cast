@@ -9,12 +9,12 @@
 
     <body ng-controller="Forecast as forecast">
         <header class="primary-header">
-            <h1>WeatherCast {{'hello' + ' world'}}</h1>
+            <h1>WeatherCast</h1>
             <p class="tagline">Quick 7 day weather forecasts</p>
         </header>
 
-        <form class="location-search">
-            <input class="location-input" type="search" placeholder="Your location" />
+        <form class="location-search" ng-submit="forecast.getForecast()">
+            <input class="location-input" type="search" placeholder="Your location" ng-model="forecast.query" />
             <button class="location-submit" type="submit">Go</button>
         </form>
 
