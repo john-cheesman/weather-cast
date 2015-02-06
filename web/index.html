@@ -18,7 +18,7 @@
             <button class="location-submit" type="submit">Go</button>
         </form>
 
-        <section class="forecast">
+        <section class="forecast" ng-show="forecast.forecasts">
             <header class="forecast-header">
                 <h1>{{forecast.location.name + ', ' + forecast.location.country}}</h1>
             </header>

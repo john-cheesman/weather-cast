@@ -11,13 +11,8 @@ paths = {
         src: [
             'vendor/bower/angular/angular.js',
             'vendor/bower/angular-resource/angular-resource.js',
-            'src/js/app.module.js',
-            'src/js/components/data/data.module.js',
-            'src/js/components/data/data.js',
-            'src/js/components/forecast/forecast.module.js',
-            'src/js/components/forecast/forecast.js',
-            'src/js/components/forecast/celsiusFilter.js',
-            'src/js/components/forecast/fahrenheitFilter.js'
+            'src/js/**/*.module.js',
+            'src/js/**/*.js'
         ],
         dest: 'web/js'
     }
@@ -26,7 +21,7 @@ paths = {
 gulp.task('scripts', function() {
     gulp.src(paths.scripts.src)
         .pipe(concat('scripts.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest(paths.scripts.dest));
 });
 
