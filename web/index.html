@@ -26,9 +26,20 @@
             <ul class="forecast-days">
                 <li class="forecast-day" ng-repeat="forecast in forecast.forecasts">
                     <h2>{{(forecast.dt * 1000) | date: 'EEEE dd/MM/yy'}}</h2>
-                    <p class="forecast-temperature">{{forecast.temp.min | celsius}} - {{forecast.temp.max | celsius}}&deg;C</p>
-                    <p class="forecast-temperature">{{forecast.temp.min | fahrenheit}} - {{forecast.temp.max | fahrenheit}}&deg;F</p>
                     <p class="forecast-description">{{forecast.weather[0].description}}</p>
+                    <dl class="forecast-data">
+                        <dt>High:</dt>
+                        <dd>{{forecast.temp.max | celsius}}&deg;C/{{forecast.temp.max | fahrenheit}}&deg;F</dd>
+
+                        <dt>Low:</dt>
+                        <dd>{{forecast.temp.min | celsius}}&deg;C/{{forecast.temp.min | fahrenheit}}&deg;F</dd>
+
+                        <dt>Wind:</dt>
+                        <dd>{{forecast.speed}}m/s</dd>
+
+                        <dt>Humidity:</dt>
+                        <dd>{{forecast.humidity}}&#37;</dd>
+                    </dl>
                 </li>
             </ul>
         </section>
