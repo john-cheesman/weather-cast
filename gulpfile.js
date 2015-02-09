@@ -15,6 +15,10 @@ paths = {
             'src/js/**/*.js'
         ],
         dest: 'web/js'
+    },
+    images: {
+        src: 'src/images/*',
+        dest: 'web/images'
     }
 };
 
@@ -25,12 +29,20 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest(paths.scripts.dest));
 });
 
+gulp.task('images', function() {
+   gulp.src(paths.images.src)
+       .pipe(gulp.dest(paths.images.dest));
+});
+
 gulp.task('clean', function() {
-   del(paths.scripts.dest);
+   del([
+       paths.scripts.dest,
+       paths.images.dest
+   ]);
 });
 
 gulp.task('build', function() {
-    sequence('clean', 'scripts');
+    sequence('clean', 'scripts', 'images');
 });
 
 gulp.task('watch', function() {
