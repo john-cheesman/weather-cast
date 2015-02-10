@@ -3,11 +3,11 @@
 
     angular
         .module('app.forecast')
-        .controller('Forecast', Forecast);
+        .controller('ForecastController', ForecastController);
 
-    Forecast.$inject = ['dataSource'];
+    ForecastController.$inject = ['forecastService'];
 
-    function Forecast(dataSource) {
+    function ForecastController(forecastService) {
         var vm = this;
 
         vm.date = new Date();
@@ -16,7 +16,7 @@
         vm.forecasts = null;
 
         vm.getForecast = function() {
-            dataSource.get({location: vm.query})
+            forecastService.get({location: vm.query})
                 .$promise.then(function(data) {
                     vm.location = data.city;
                     vm.forecasts = data.list;

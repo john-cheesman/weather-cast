@@ -2,12 +2,12 @@
     'use strict';
 
     angular
-        .module('app.data', ['ngResource'])
-        .factory('dataSource', dataSource);
+        .module('app.forecast')
+        .factory('forecastService', forecastService);
 
-    dataSource.$inject = ['$resource'];
+    forecastService.$inject = ['$resource'];
 
-    function dataSource($resource) {
+    function forecastService($resource) {
         return $resource(
             'http://api.openweathermap.org/data/2.5/forecast/daily?q=:location,uk&cnt=7',
             {

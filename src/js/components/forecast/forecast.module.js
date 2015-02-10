@@ -1,5 +1,5 @@
 (function() {
     'use strict';
 
-    angular.module('app.forecast', []);
+    angular.module('app.forecast', ['ngResource']);
 })();

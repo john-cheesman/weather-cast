@@ -1,5 +1,5 @@
 (function() {
     'use strict';
 
-    angular.module('app', ['app.data', 'app.forecast']);
+    angular.module('app', ['app.forecast']);
 })();

@@ -25,7 +25,7 @@ paths = {
 gulp.task('scripts', function() {
     gulp.src(paths.scripts.src)
         .pipe(concat('scripts.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(paths.scripts.dest));
 });
 
