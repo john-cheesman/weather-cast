@@ -1,0 +1,14 @@
+//
+// Location Search
+// _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+.location-search {
+    position: relative;
+}
+
+.location-submit {
+    @extend %default-button;
+
+    position: absolute;
+    right: 0;
+}
